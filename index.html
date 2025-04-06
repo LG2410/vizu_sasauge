@@ -162,13 +162,16 @@
         <div class="section" id="dashboard">
             <h2>Sausage Sales Dashboard <span class="emoji-bounce">🔥</span></h2>
             <p>Check out the meaty stats below, powered by Tableau! 🍔</p>
-            <div class="tableau-embed">
+             <div class="tableau-container" id="tableau-embed">
                 <iframe 
                     src="https://public.tableau.com/views/sausage/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
-                    title="Sausage Sales Dashboard"
-                    allowfullscreen
-                    onerror="document.getElementById('fallback').style.display='block'; this.style.display='none';">
+                    allowfullscreen>
                 </iframe>
+            </div>
+            <div class="fallback-message" id="fallback">
+                <p>Oops! The Tableau dashboard couldn’t load. 😢 Please <a href="https://public.tableau.com/views/NBA_17425544849980/Dashboard1" target="_blank">view it directly on Tableau Public</a>! 🏀 Alternatively, try hosting this site on a different platform like Netlify if GitHub Pages is blocking it.</p>
+            </div>
+        </div>
                 <div id="fallback" class="fallback-message">
                     Oops! Couldn’t connect to the Tableau dashboard. 🌭 Please ensure the URL is correct and the dashboard is publicly accessible! 📡
                 </div>
