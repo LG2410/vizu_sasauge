@@ -168,10 +168,11 @@
                 <iframe 
                     src="https://public.tableau.com/views/sausage/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
                     title="Sausage Sales Dashboard"
+                    allowfullscreen
                     onerror="document.getElementById('fallback').style.display='block'; this.style.display='none';">
                 </iframe>
                 <div id="fallback" class="fallback-message">
-                    Oops! Couldn’t connect to the Tableau dashboard. 🌭 Please check the URL or your internet connection and try again! 📡
+                    Oops! Couldn’t connect to the Tableau dashboard. 🌭 Please ensure the URL is correct and the dashboard is publicly accessible! 📡
                 </div>
             </div>
         </div>
@@ -179,7 +180,7 @@
         <!-- Insights Section -->
         <div class="section" id="insights">
             <h2>Highlights & Insights 📈</h2>
-            <p>Check out the sizzling stats that make our sausage sales pop! 🌭</p>
+            <p>CheckviewportCheck out the sizzling stats that make our sausage sales pop! 🌭</p>
             <div class="insights-grid">
                 <!-- Category Names -->
                 <div class="insight-box">
@@ -253,6 +254,11 @@
                 section.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Alert on page load
+        window.onload = function() {
+            alert("Welcome to Sausage Sales Analytics! 🌭 Enjoy the data feast!");
+        };
     </script>
 </body>
 </html>
