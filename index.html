@@ -28,9 +28,6 @@
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             animation: slideIn 1s ease-out;
-            position: sticky;
-            top: 0;
-            z-index: 10;
         }
 
         h1 {
@@ -74,13 +71,13 @@
         }
 
         .section {
-            background: linear-gradient(45deg, #ffeaa7, #fab1a0); /* Fun yellow-orange gradient */
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
             padding: 30px;
             margin: 25px 0;
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             animation: fadeInUp 1s ease-out;
-            border: 3px dashed #e74c3c; /* Playful dashed border */
+            border: 3px dashed #e74c3c;
         }
 
         h2 {
@@ -95,9 +92,15 @@
             margin-right: 10px;
         }
 
+        .cool-text {
+            font-family: 'Bangers', cursive; /* Cool font */
+            font-size: 1.4em; /* Slightly larger than default */
+            color: #c0392b; /* Matches the sausage theme */
+        }
+
         .tableau-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 75%;
             height: 0;
             overflow: hidden;
             background: #fff;
@@ -131,11 +134,11 @@
             background: linear-gradient(45deg, #e74c3c, #f39c12);
             padding: 25px;
             border-radius: 12px;
-            color: #ffeaa7; /* Light yellow for contrast */
+            color: #ffeaa7;
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
-            font-family: 'Bangers', cursive; /* Cool, comic-style font */
+            font-family: 'Bangers', cursive;
             font-size: 1.2em;
         }
 
@@ -205,12 +208,12 @@
 
         <div class="section" id="overview">
             <h2>Overview</h2>
-            <p>🔥 Get ready for a sausage party! Welcome to the Sausage Analytics Hub, where we grill the juiciest data and serve it hot with our wild Tableau dashboards! 🌭🎉</p>
+            <p class="cool-text">🔥 Get ready for a sausage party! Welcome to the Sausage Analytics Hub, where we grill the juiciest data and serve it hot with our wild Tableau dashboards! 🌭🎉</p>
         </div>
 
         <div class="section" id="tableau">
             <h2>Sausage Insights</h2>
-            <p>🍴 Sink your teeth into our sizzling Tableau dashboard - it’s the tastiest way to explore sausage stats! 😋🔍</p>
+            <p class="cool-text">🍴 Sink your teeth into our sizzling Tableau dashboard - it’s the tastiest way to explore sausage stats! 😋🔍</p>
             <div class="tableau-container">
                 <iframe 
                     src="https://public.tableau.com/views/sausage/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link&:embed=y&:showVizHome=n&:apiID=host0" 
@@ -273,7 +276,7 @@
 
         <div class="section" id="contact">
             <h2>Contact Us</h2>
-            <p>🍔 Craving more sausage secrets? Fire us an email at <a href="mailto:info@sausagehub.com">info@sausagehub.com</a> - we’re ready to spill the beans (and sausages)! 😜📧</p>
+            <p class="cool-text">🍔 Craving more sausage secrets? Fire us an email at <a href="mailto:info@sausagehub.com">info@sausagehub.com</a> - we’re ready to spill the beans (and sausages)! 😜📧</p>
         </div>
 
         <footer>
@@ -294,12 +297,12 @@
 
         sections.forEach(section => observer.observe(section));
 
-        // Smooth scroll with offset for sticky header
+        // Smooth scroll with offset
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const section = document.querySelector(this.getAttribute('href'));
-                const offset = 100;
+                const offset = 20;
                 const sectionPosition = section.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({
                     top: sectionPosition,
