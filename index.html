@@ -64,21 +64,34 @@
             margin: 40px 0;
             position: relative;
         }
-        iframe {
+        .mock-dashboard {
             border: 5px solid #FFD700;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             width: 100%;
             height: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            overflow: hidden;
+            position: relative;
         }
-        .fallback-message {
-            display: none;
-            color: #3C2F2F;
-            font-size: 1.2em;
+        .bar-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 70%;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
+        }
+        .bar {
+            width: 10%;
+            background: #8B0000;
+            border-radius: 5px 5px 0 0;
+            transition: height 1s ease;
+        }
+        .bar-label {
             text-align: center;
+            color: #3C2F2F;
+            font-size: 1em;
+            margin-top: 5px;
         }
         footer {
             text-align: center;
@@ -160,19 +173,23 @@
             <p>Dive into the sizzling world of sausage sales with our interactive analytics dashboard. Whether you're a sausage enthusiast or a data nerd, we've got the goods! 🌭📊</p>
         </div>
 
-        <!-- Tableau Dashboard Section -->
+        <!-- Mock Dashboard Section -->
         <div class="section" id="dashboard">
             <h2>Sausage Sales Dashboard <span class="emoji-bounce">🔥</span></h2>
-            <p>Check out the meaty stats below, powered by Tableau! 🍔</p>
+            <p>Check out the meaty stats below! 🍔 (Tableau coming soon—enjoy this preview!)</p>
             <div class="tableau-embed">
-                <iframe 
-                src="https://public.tableau.com/views/SausageSales/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" 
-                title="Sausage Sales Dashboard"
-                allowfullscreen
-                onerror="document.getElementById('fallback').style.display='block'; this.style.display='none';">
-            </iframe>
-                <div id="fallback" class="fallback-message">
-                    Oops! Couldn’t connect to the Tableau dashboard. 🌭 Please ensure the URL is correct and the dashboard is publicly accessible! 📡
+                <div class="mock-dashboard">
+                    <h3 style="color: #3C2F2F; text-align: center; padding: 20px;">Sausage Sales by Category 🌭</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="height: 60%;"><div class="bar-label">Stinky 👃</div></div>
+                        <div class="bar" style="height: 45%;"><div class="bar-label">Asshole 😈</div></div>
+                        <div class="bar" style="height: 80%;"><div class="bar-label">Magical ✨</div></div>
+                        <div class="bar" style="height: 30%;"><div class="bar-label">Cheap 💸</div></div>
+                        <div class="bar" style="height: 50%;"><div class="bar-label">Vegan 🌱</div></div>
+                        <div class="bar" style="height: 70%;"><div class="bar-label">Fancy 🎩</div></div>
+                        <div class="bar" style="height: 55%;"><div class="bar-label">Drunken 🍺</div></div>
+                        <div class="bar" style="height: 65%;"><div class="bar-label">Spicy 🌶️</div></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,7 +197,7 @@
         <!-- Insights Section -->
         <div class="section" id="insights">
             <h2>Highlights & Insights 📈</h2>
-            <p>CheckviewportCheck out the sizzling stats that make our sausage sales pop! 🌭</p>
+            <p>Check out the sizzling stats that make our sausage sales pop! 🌭</p>
             <div class="insights-grid">
                 <!-- Category Names -->
                 <div class="insight-box">
